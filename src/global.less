@@ -1,0 +1,105 @@
+@import '~@/assets/less/layoutSiderMenu.less'; // 左侧菜单统一样式
+@import '~@/assets/less/mixins.less';
+@import '~@/assets/less/protable.less';
+
+// 全局样式修改
+html,
+body,
+#root {
+  height: 100%;
+}
+
+.colorWeak {
+  filter: invert(80%);
+}
+
+.ant-layout {
+  min-height: 100vh;
+}
+.ant-pro-sider.ant-layout-sider.ant-pro-sider-fixed {
+  left: unset;
+}
+
+canvas {
+  display: block;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+@media (max-width: @screen-xs) {
+  .ant-table {
+    width: 100%;
+    overflow-x: auto;
+    &-thead > tr,
+    &-tbody > tr {
+      > th,
+      > td {
+        white-space: pre;
+        > span {
+          display: block;
+        }
+      }
+    }
+  }
+}
+
+// Compatible with IE11
+@media screen and(-ms-high-contrast: active), (-ms-high-contrast: none) {
+  body .ant-design-pro > .ant-layout {
+    min-height: 100vh;
+  }
+}
+
+// 滚动条样式
+.scrollBar::-webkit-scrollbar {
+  // /* 滚动条整体样式 高宽分别对应横竖滚动条的尺寸 */
+  width: 8px;
+  height: 8px;
+}
+
+.scrollBar::-webkit-scrollbar-thumb {
+  background: #ccc;
+  // /* 滚动条里面小方块 */
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.scrollBar::-webkit-scrollbar-track {
+  background: #fff;
+  border-radius: 10px;
+  // /* 滚动条里面轨道 */
+  box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+// 侧边栏背景色
+.ant-menu {
+  background-color: #ba001c !important;
+  .ant-menu-item {
+    margin-top: 10px; // 侧边栏选择的样式
+  }
+}
+// 去掉侧边栏的收缩展开按钮
+.ant-pro-sider-collapsed-button {
+  display: none !important;
+}
+// 侧边栏底部背景色
+.ant-layout-sider {
+  .ant-pro-sider-footer {
+    background-color: #ba001c !important;
+    .ant-pro-global-footer {
+      background-color: #ba001c !important;
+    }
+  }
+  .ant-layout-sider-children {
+    padding: 0 !important;
+  }
+}

@@ -1,0 +1,74 @@
+/** 处理layout左侧导航栏样式 **/
+// 导航中默认的颜色字体
+.ant-layout-sider-children {
+  padding: 0 10px;
+  color: #2a365a;
+  font-weight: bold;
+  font-size: 14px;
+  font-family: PingFang SC;
+
+  // 选中导航的时候样式
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected {
+    background: linear-gradient(90deg, #ce4553, #ce4553);
+    border-radius: 5px;
+    // 选中导航的字体颜色
+    .anticon {
+      svg {
+        color: white !important;
+      }
+    }
+    .ant-pro-menu-item-title {
+      color: white !important;
+    }
+    .menuRenderItemName {
+      color: white;
+    }
+    .ant-pro-base-menu-inline-item-text {
+      color: white;
+    }
+  }
+
+  // icon 大小调整
+  svg {
+    width: 20px;
+    height: 17px;
+    margin-bottom: -2px;
+  }
+  // 无箭头菜单active时的文字颜色
+  .ant-menu-item-active {
+    .anticon {
+      svg {
+        color: black !important;
+      }
+    }
+    .ant-pro-menu-item {
+      color: #2e8cf6 !important;
+    }
+  }
+  // 有箭头菜单active时的文字颜色
+  .ant-menu-submenu-active {
+    .ant-menu-submenu-arrow {
+      color: #2e8cf6 !important;
+    }
+    .subMenuItemRenderTitle {
+      .ant-pro-menu-item {
+        color: #2e8cf6 !important;
+      }
+    }
+  }
+  // 有箭头菜单选中时文字颜色
+  .ant-menu-submenu-selected {
+    .ant-menu-submenu-arrow {
+      color: #2e8cf6 !important;
+    }
+    .subMenuItemRenderTitle {
+      .ant-pro-menu-item {
+        color: #2e8cf6 !important;
+      }
+    }
+  }
+  // 去掉选中的导航右边的蓝色条子
+  .ant-menu-inline .ant-menu-item::after {
+    border-right: 0 solid #fff;
+  }
+}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkumi_yiyuangou=self.webpackChunkumi_yiyuangou||[]).push([[717],{89177:function(c,u,n){n.r(u),n.d(u,{default:function(){return s}});var i=n(25107),a=n(11527),t="apaQ";function s(){return(0,a.jsx)("div",{_nk:"".concat(t,"11"),children:(0,a.jsx)(i.Outlet,{_nk:"".concat(t,"21")})})}}}]);

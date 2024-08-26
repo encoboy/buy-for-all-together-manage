@@ -1,0 +1,80 @@
+{
+  "private": true,
+  "author": "糖醋加冰 <443080804@qq.com>",
+  "scripts": {
+    "analyze": "cross-env ANALYZE=1 max build",
+    "build": "max build",
+    "build:product": "cross-env REACT_APP_ENV=production max build",
+    "dev": "max dev",
+    "dev:product": "cross-env REACT_APP_ENV=production max dev",
+    "format": "prettier --cache --write .",
+    "postinstall": "max setup",
+    "lint": "umi g tmp && npm run lint:js && npm run lint:style && npm run lint:prettier && npm run tsc",
+    "lint-staged": "lint-staged",
+    "lint-staged:js": "eslint --ext .js,.jsx,.ts,.tsx ",
+    "lint:fix": "eslint --fix --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src && npm run lint:style",
+    "lint:js": "eslint --cache --ext .js,.jsx,.ts,.tsx --format=pretty ./src",
+    "lint:prettier": "prettier -c --write \"src/**/*\" --end-of-line auto",
+    "lint:style": "stylelint --fix \"src/**/*.less\" --syntax less",
+    "prepare": "husky install",
+    "setup": "max setup",
+    "start": "npm run dev",
+    "tsc": "tsc --noEmit"
+  },
+  "lint-staged": {
+    "**/*.less": "stylelint --syntax less",
+    "**/*.{js,jsx,ts,tsx}": "npm run lint-staged:js",
+    "**/*.{js,jsx,tsx,ts,less,md,json}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@ant-design/icons": "^5.0.1",
+    "@ant-design/pro-components": "^2.4.4",
+    "@babel/core": "7.8.0",
+    "@umijs/max": "^4.0.72",
+    "antd": "^5.4.0",
+    "classnames": "^2.3.2",
+    "dayjs": "^1.11.9",
+    "dva": "^2.4.1",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "postcss": "8.4.6",
+    "rc-field-form": "1.22.0",
+    "react": "18.2.0",
+    "react-activation": "^0.12.4",
+    "react-dom": "^18.2.0",
+    "styled-components": "^6.0.3",
+    "umi-plugin-keep-alive": "0.0.1-beta.35",
+    "umi-request": "^1.4.0",
+    "webpack": "5.20.0"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.3",
+    "@types/lodash": "^4.14.195",
+    "@types/react": "^18.0.33",
+    "@types/react-dom": "^18.0.11",
+    "@umijs/fabric": "^4.0.1",
+    "@umijs/yorkie": "^2.0.5",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.7",
+    "prettier-plugin-organize-imports": "^3.2.2",
+    "prettier-plugin-packagejson": "^2.4.3",
+    "typescript": "^5.0.3"
+  },
+  "gitHooks": {
+    "commit-msg": "fabric verify-commit"
+  },
+  "name": "umi-yiyuangou",
+  "description": "`@umijs/max` 模板项目，更多功能参考 [Umi Max 简介](https://umijs.org/docs/max/introduce)",
+  "version": "1.0.0",
+  "main": ".eslintrc.js",
+  "repository": {
+    "type": "git",
+    "url": "git@gitee.com:encoboy/buy-for-all-together-manage.git"
+  },
+  "keywords": [],
+  "license": "ISC"
+}

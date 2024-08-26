@@ -1,0 +1,37 @@
+{
+  "id": "4196431",
+  "name": "umi-yiyuangou",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "umi-一元购后台",
+  "glyphs": [
+    {
+      "icon_id": "173157",
+      "name": "商品管理icon",
+      "font_class": "shangpinguanliicon",
+      "unicode": "e60b",
+      "unicode_decimal": 58891
+    },
+    {
+      "icon_id": "1260072",
+      "name": "奖品配置",
+      "font_class": "jiangpinpeizhi",
+      "unicode": "e711",
+      "unicode_decimal": 59153
+    },
+    {
+      "icon_id": "4511910",
+      "name": "用户管理",
+      "font_class": "yonghuguanli",
+      "unicode": "e642",
+      "unicode_decimal": 58946
+    },
+    {
+      "icon_id": "16137345",
+      "name": "订单管理",
+      "font_class": "dingdanguanli",
+      "unicode": "e7c8",
+      "unicode_decimal": 59336
+    }
+  ]
+}
